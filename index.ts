@@ -8,6 +8,12 @@ const app = express()
 
 dotenv.config()
 
+const PORT = process.env.PORT
+if(!PORT){
+    console.log("Port is not defined")
+    process.exit(1)
+}
+
 app.disable('x-powered-by')
 app.use(cors({ origin: '*' }))
 
@@ -16,4 +22,6 @@ app.get('/health-check', (_, res) => res.status(200).send('OK'))
 app.use(auth)
 app.get('/status', getStatus)
 
-app.listen(process.env.PORT)
+app.listen(PORT, ()=>{
+    console.log(`server is running on port ${PORT}`)
+})
