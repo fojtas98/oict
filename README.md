@@ -21,6 +21,6 @@ The app will be accessible at `http://localhost:${PORT}`.
 
 ### Example of requests 
 
-- Get card status: `http://localhost:${PORT}/status?cardNumber=123`
-- Health check `http://localhost:${PORT}/health-check`
+- Get card status: `curl -H "x-api-key: ${API_KEY}" http://localhost:${PORT}/status?cardNumber=123`
+- Health check `curl http://localhost:${PORT}/health-check`
 
