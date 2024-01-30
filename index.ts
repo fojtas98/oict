@@ -1,8 +1,8 @@
 import dotenv from 'dotenv'
+dotenv.config()
 import app from "./server/app"
 
 
-dotenv.config()
 const PORT = process.env.PORT
 if(!PORT){
     console.log("Port is not defined")
