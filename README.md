@@ -24,3 +24,8 @@ The app will be accessible at `http://localhost:${PORT}`.
 - Get card status: `curl -H "x-api-key: ${API_KEY}" http://localhost:${PORT}/status?cardNumber=123`
 - Health check `curl http://localhost:${PORT}/health-check`
 
+
+## Tests
+
+- This project is covered with unit tests
+- you can run them wih `npm run test`, if you want to see coverage you need to run npm `npm run test -- --coverage`

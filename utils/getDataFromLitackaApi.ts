@@ -16,7 +16,7 @@ export default async (cardNumber: string): Promise<getStatusResponse> => {
     return response
   } else {
     console.log('Validity response status: ', validity.status)
-    console.log('Stage response status: ', state.status)
+    console.log('State response status: ', state.status)
     throw new Error()
   }
 }

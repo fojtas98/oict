@@ -7,7 +7,7 @@ const auth: Handler = (req, res, next) => {
   }
 
   if (process.env.API_KEY !== token) {
-    return res.status(401).send('token is not valid')
+    return res.status(401).send('Token is not valid')
   }
   next()
 }
