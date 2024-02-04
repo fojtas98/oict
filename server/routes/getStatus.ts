@@ -53,6 +53,7 @@ import getDataFromLitackaApi from '../../utils/getDataFromLitackaApi'
  */
 const getStatus: Handler = async (req, res) => {
   if (Object.keys(req.query).length === 0) {
+    // [CR] když bych chtěl přidat další volitelný query parametr, musel bych upravit i tento řádek
     return res.status(400).send('Missing query parameters')
   }
   const cardNumber = req.query.cardNumber
@@ -63,6 +64,7 @@ const getStatus: Handler = async (req, res) => {
     const response = await getDataFromLitackaApi(cardNumber)
     res.json(response)
   } catch (err) {
+    // [CR] bylo by vhodné zachytit konkrétní chyby, např. 404, 401, 403, 500
     return res.status(500).send('Internal error')
   }
 }
