@@ -32,3 +32,14 @@ The app will be accessible at `http://localhost:${PORT}`.
 
 ## OpenAPI
 - you can access openAPI documentation of the API on `http://localhost:${PORT}/docs`
+
+## code review
+- jakou verzi node.js použít? (dá se poznat z Dockerfile)
+- testy v server složce, je tomu přizbůsoben build?
+- openapi je generovaná, jakou to má nevýhodu?
+- hodil by se .env.sample
+- proč chyby vrací plain text, ale /status vrací json?
+- byl použit nějaký linter/formatter? hodilo by se mít konfiguraci v repu
+- cardNumber měl být url parametr, ne query parametr
+- proč /status? čeho status?
+
