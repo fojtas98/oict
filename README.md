@@ -38,7 +38,6 @@ The app will be accessible at `http://localhost:${PORT}`.
 - testy v server složce, je tomu přizbůsoben build?
 - openapi je generovaná, jakou to má nevýhodu?
 - hodil by se .env.sample
-- hodil by se odkaz na openapi v readme
 - proč chyby vrací plain text, ale /status vrací json?
 - byl použit nějaký linter/formatter? hodilo by se mít konfiguraci v repu
 - cardNumber měl být url parametr, ne query parametr
